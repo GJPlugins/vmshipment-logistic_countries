@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmshipment" method="upgrade">
+    <name>By Logistic countries</name>
+    <creationDate>2020 04 17</creationDate>
+    <author>Gartes</author>
+    <authorUrl></authorUrl>
+    <copyright>Copyright (C) 2004 - 2019 Virtuemart Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>0.0.1</version>
+    <description>VMSHIPMENT_LOGISTIC_COUNTRIES_PLUGIN_DESC</description>
+    <!-- Scripts to run on installation -->
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <folder>assets</folder>
+        <folder>fields</folder>
+        <folder>Helpers</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <filename plugin="logistic_countries">logistic_countries.php</filename>
+        <filename>logistic_countries.script.php</filename>
+        <filename>logistic_countries_update_server.xml</filename>
+        <filename>README.md</filename>
+    </files>
+    <vmconfig>
+        <fields name="params">
+            <field name="servise"
+            	type="list"
+            	default=""
+            	required=""
+            	label="LOGISTIC_COUNTRIES_SERVISE"
+            	description="LOGISTIC_COUNTRIES_SERVISE_DESC"
+            	class="servise "
+            	multiple="false"
+            	readonly=""
+            	showon=""
+            	filter="raw" >
+            		<option value="">Please Select</option>
+            		<option value="weight_countries">Weight Countries</option>
+            		<option value="1">Option 2</option>
+            	</field>
+
+        </fields>
+    </vmconfig>
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="VirtueMart3 plg_vmshipment_logistic_countries Update Site">https://raw.githubusercontent.com/GJPlugins/vmshipment-logistic_countries/master/logistic_countries_update_server.xml</server>
+    </updateservers>
+</extension>
